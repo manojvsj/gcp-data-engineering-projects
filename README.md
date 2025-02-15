@@ -11,23 +11,6 @@ This repository contains a collection of mini projects focused on data engineeri
 
 ## Setting Up Kaggle API Key and Google Credentials
 
-### Kaggle API Key
-
-1. **Create a Kaggle Account:**
-   - Go to [Kaggle](https://www.kaggle.com/) and create an account if you don't have one.
-
-2. **Generate API Key:**
-   - Navigate to your Kaggle account settings by clicking on your profile picture and selecting "Account".
-   - Scroll down to the "API" section and click on "Create New API Token". This will download a `kaggle.json` file containing your API credentials.
-
-3. **Set Up API Key:**
-   - Place the `kaggle.json` file in the `~/.kaggle/` directory. You may need to create this directory if it doesn't exist:
-     ```bash
-     mkdir -p ~/.kaggle
-     mv ~/Downloads/kaggle.json ~/.kaggle/
-     chmod 600 ~/.kaggle/kaggle.json
-     ```
-
 ### Google Cloud Credentials
 
 1. **Create a Google Cloud Project:**
@@ -47,6 +30,22 @@ This repository contains a collection of mini projects focused on data engineeri
    - Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to point to the downloaded JSON key file:
      ```bash
      export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-file.json"
+     ```
+### Kaggle API Key
+
+1. **Create a Kaggle Account:**
+   - Go to [Kaggle](https://www.kaggle.com/) and create an account if you don't have one.
+
+2. **Generate API Key:**
+   - Navigate to your Kaggle account settings by clicking on your profile picture and selecting "Account".
+   - Scroll down to the "API" section and click on "Create New API Token". This will download a `kaggle.json` file containing your API credentials.
+
+3. **Set Up API Key:**
+   - Place the `kaggle.json` file in the `~/.kaggle/` directory. You may need to create this directory if it doesn't exist:
+     ```bash
+     mkdir -p ~/.kaggle
+     mv ~/Downloads/kaggle.json ~/.kaggle/
+     chmod 600 ~/.kaggle/kaggle.json
      ```
 
 1. Clone the repository:
