@@ -7,11 +7,12 @@ This repository contains a collection of mini projects focused on data engineeri
 - Google Cloud Platform account
 - Python 3.7 or higher
 - Virtual environment setup
+
 - Kaggle Account (for sample data)
 
-## Setting Up Kaggle API Key and Google Credentials
+### Setting Up Kaggle API Key and Google Credentials
 
-### Google Cloud Credentials
+#### Google Cloud Credentials
 
 1. **Create a Google Cloud Project:**
    - Go to the [Google Cloud Console](https://console.cloud.google.com/) and create a new project.
@@ -31,7 +32,34 @@ This repository contains a collection of mini projects focused on data engineeri
      ```bash
      export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-file.json"
      ```
-### Kaggle API Key
+
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/gcp-dataengineering-mini-projects.git
+   cd gcp-dataengineering-mini-projects
+
+## Projects
+
+1. **Simple Event driven file processing**
+   - Analyze large datasets using Google BigQuery.
+   - Perform SQL queries to extract insights from data.
+
+2. **Data Processing with Realtime pipeline**
+   - Use Google Cloud dataflow to stream data using Apache beam.
+   - Create fake data to publish on pubsub
+   - Stream data to pubsub to Bigquery using dataflow stream job
+
+
+## Follow for Updates
+
+I am planning to add 50 such projects to this repository every week. Keep following my [LinkedIn](https://www.linkedin.com/in/manojvsj/) for updates.
+
+
+
+
+
+#### Kaggle API Key (OPTIONAL) - May required for some projects for sample data
 
 1. **Create a Kaggle Account:**
    - Go to [Kaggle](https://www.kaggle.com/) and create an account if you don't have one.
@@ -47,24 +75,3 @@ This repository contains a collection of mini projects focused on data engineeri
      mv ~/Downloads/kaggle.json ~/.kaggle/
      chmod 600 ~/.kaggle/kaggle.json
      ```
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/gcp-dataengineering-mini-projects.git
-   cd gcp-dataengineering-mini-projects
-
-## Projects
-
-1. **Simple Event driven file processing**
-   - Analyze large datasets using Google BigQuery.
-   - Perform SQL queries to extract insights from data.
-
-2. **Data Processing with Dataproc**
-   - Use Google Cloud Dataproc to process data using Apache Spark.
-   - Implement ETL (Extract, Transform, Load) pipelines.
-
-
-## Follow for Updates
-
-I am planning to add 50 such projects to this repository every week. Keep following my [LinkedIn](https://www.linkedin.com/in/manojvsj/) for updates.
-

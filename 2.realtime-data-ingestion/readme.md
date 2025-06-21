@@ -40,8 +40,8 @@ This project sets up a real-time data pipeline using:
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/gcp-streaming-pipeline.git
-cd gcp-streaming-pipeline
+git clone https://github.com/your-username/gcp-dataengineering-mini-projects.git
+cd gcp-dataengineering-mini-projects/2.realtime-data-ingestion
 ```
 
 #### 2. Install Dependencies
