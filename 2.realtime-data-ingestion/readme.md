@@ -1,5 +1,6 @@
 ## 🛠 Project 2/50: Streaming Data with Pub/Sub, Dataflow, and BigQuery
 
+![flow-diagram](flow-2.png)
 
 ## Real-Time Streaming Pipeline on Google Cloud
 
@@ -106,7 +107,7 @@ Update these options in streaming_pipeline.py:
 ```
 options.view_as(StandardOptions).runner = "DataflowRunner"
 options.view_as(GoogleCloudOptions).project = "your-project-id"
-options.view_as(GoogleCloudOptions).region = "us-central1"
+options.view_as(GoogleCloudOptions).region = "your-region"
 options.view_as(GoogleCloudOptions).staging_location = "gs://your-bucket-name/staging"
 options.view_as(GoogleCloudOptions).temp_location = "gs://your-bucket-name/temp"
 ```

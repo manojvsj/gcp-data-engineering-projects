@@ -5,6 +5,10 @@
 
 This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically.
 
+
+![flow-diagram](flow1.png)
+
+
 ### 🗂 Project Structure
 ```
 ├── main.py # Cloud Function handler
