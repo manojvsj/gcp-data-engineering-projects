@@ -36,6 +36,7 @@ This repository contains a collection of mini projects focused on data engineeri
    ```bash
    git clone https://github.com/your-username/gcp-dataengineering-mini-projects.git
    cd gcp-dataengineering-mini-projects
+   ```
 
 ## Projects
 
