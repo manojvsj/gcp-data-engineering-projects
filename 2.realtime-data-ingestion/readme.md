@@ -1,7 +1,7 @@
 ## 🛠 Project 2/50: Streaming Data with Pub/Sub, Dataflow, and BigQuery
 
 
-# Real-Time Streaming Pipeline on Google Cloud
+## Real-Time Streaming Pipeline on Google Cloud
 
 This project sets up a real-time data pipeline using:
 
@@ -18,6 +18,7 @@ This project sets up a real-time data pipeline using:
 ├── streaming_pipeline.py # Apache Beam pipeline: Pub/Sub → BigQuery
 ├── requirements.txt # Python dependencies
 └── README.md # Setup instructions
+└── setup.sh # Setup GCP environment scripts
 ```
 ---
 
@@ -48,33 +49,29 @@ cd gcp-streaming-pipeline
 pip install -r requirements.txt
 ```
 
-#### 3. Create Pub/Sub Topic & Subscription
+#### 3. Fill the config details in the setup.sh script
 ```
-gcloud pubsub topics create your-topic-id
-gcloud pubsub subscriptions create your-sub-id --topic=your-topic-id
-```
-
-#### 4. Create BigQuery Dataset and Table
-Replace with your actual project and dataset names.
-
-```
-CREATE TABLE `your-project-id.your_dataset.your_table` (
-  user_id INT64,
-  action STRING,
-  timestamp FLOAT64
-);
+PROJECT_ID="your-project-id"
+TOPIC_ID="your-topic-id"
+SUBSCRIPTION_ID="your-sub-id"
+BQ_DATASET="your_dataset"
+BQ_TABLE="your_table"
+GCS_BUCKET="your-bucket-name"
+REGION="us-central1"
 ```
 
-#### 5. Create GCS Bucket (for Dataflow staging)
+#### Run the setup.sh to create the pubsub topic, gcs bucket and BQ objects
 ```
-gsutil mb gs://your-bucket-name/
+. ./setup.sh
 ```
+Now your GCP Environment is Ready !!!!
+
+
 
 #### 🚀 Run the Publisher
 Edit publisher.py to fill in:
 ```
 project_id
-
 topic_id
 ```
 
@@ -83,9 +80,19 @@ Run it:
 python publisher.py
 ```
 
+NOTE: Open in another terminal and run the dataflow pipeline locally
+
+Edit streaming_pipeline.py to fill in:
+```
+  project_id = ""
+  dataset_id = ""
+  table = ""
+  subscription_id = ""
+```
+
 #### 🧪 Test Dataflow Pipeline Locally
 
-Edit streaming_pipeline.py and use DirectRunner to run locally:
+use DirectRunner to run locally:
 
 ```
 python streaming_pipeline.py

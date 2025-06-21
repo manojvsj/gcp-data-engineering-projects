@@ -9,6 +9,7 @@ BQ_TABLE="your_table"
 GCS_BUCKET="your-bucket-name"
 REGION="us-central1"
 
+
 # ---- SETUP ----
 
 echo "Setting project to $PROJECT_ID"
