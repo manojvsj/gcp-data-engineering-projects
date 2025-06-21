@@ -40,11 +40,11 @@ This repository contains a collection of mini projects focused on data engineeri
 
 ## Projects
 
-1. **[Simple Event Driven File processing]**(https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/1.event-driven-file-processing)
+1. **[Simple Event Driven File processing](https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/1.event-driven-file-processing)**
 
    This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically
 
-2. **[Data Processing with Realtime pipeline]**(https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/2.realtime-data-ingestion)
+2. **[Data Processing with Realtime pipeline](https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/1.event-driven-file-processing)**
 
    Real time data processing with Cloud dataflow, it will listen the pub/sub topic and whenever new message arraives it will process and stream into bigquery immediatly.
 
