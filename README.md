@@ -41,8 +41,7 @@ This repository contains a collection of mini projects focused on data engineeri
 ## Projects
 
 1. **Simple Event driven file processing**
-   - Analyze large datasets using Google BigQuery.
-   - Perform SQL queries to extract insights from data.
+   This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically
 
 2. **Data Processing with Realtime pipeline**
    - Use Google Cloud dataflow to stream data using Apache beam.
