@@ -8,9 +8,7 @@ This repository contains a collection of mini projects focused on data engineeri
 - Python 3.7 or higher
 - Virtual environment setup
 
-- Kaggle Account (for sample data)
-
-### Setting Up Kaggle API Key and Google Credentials
+### Setting Up Google Credentials
 
 #### Google Cloud Credentials
 
@@ -34,7 +32,7 @@ This repository contains a collection of mini projects focused on data engineeri
      ```
 
 
-1. Clone the repository:
+#### Clone the repository:
    ```bash
    git clone https://github.com/your-username/gcp-dataengineering-mini-projects.git
    cd gcp-dataengineering-mini-projects
@@ -51,27 +49,7 @@ This repository contains a collection of mini projects focused on data engineeri
    - Stream data to pubsub to Bigquery using dataflow stream job
 
 
+
 ## Follow for Updates
 
 I am planning to add 50 such projects to this repository every week. Keep following my [LinkedIn](https://www.linkedin.com/in/manojvsj/) for updates.
-
-
-
-
-
-#### Kaggle API Key (OPTIONAL) - May required for some projects for sample data
-
-1. **Create a Kaggle Account:**
-   - Go to [Kaggle](https://www.kaggle.com/) and create an account if you don't have one.
-
-2. **Generate API Key:**
-   - Navigate to your Kaggle account settings by clicking on your profile picture and selecting "Account".
-   - Scroll down to the "API" section and click on "Create New API Token". This will download a `kaggle.json` file containing your API credentials.
-
-3. **Set Up API Key:**
-   - Place the `kaggle.json` file in the `~/.kaggle/` directory. You may need to create this directory if it doesn't exist:
-     ```bash
-     mkdir -p ~/.kaggle
-     mv ~/Downloads/kaggle.json ~/.kaggle/
-     chmod 600 ~/.kaggle/kaggle.json
-     ```
