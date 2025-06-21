@@ -40,10 +40,14 @@ This repository contains a collection of mini projects focused on data engineeri
 
 ## Projects
 
-1. **Simple Event driven file processing**
+1. **Simple Event Driven File processing**
+
    This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically
 
 2. **Data Processing with Realtime pipeline**
+
+   Real time data processing with Cloud dataflow, it will listen the pub/sub topic and whenever new message arraives it will process and stream into bigquery immediatly.
+
    - Use Google Cloud dataflow to stream data using Apache beam.
    - Create fake data to publish on pubsub
    - Stream data to pubsub to Bigquery using dataflow stream job

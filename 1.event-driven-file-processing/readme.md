@@ -67,8 +67,12 @@ Before deploying, update the following values in `deploy.sh`:
 ```bash
 PROJECT_ID="your-project-id"
 BUCKET_NAME="your-bucket-name"
-DATASET="your_dataset"
-TABLE="your_table"
+REGION="us-central1"
+FUNCTION_NAME="gcs_to_bigquery"
+RUNTIME="python311"
+
+BQ_DATASET="your_dataset"
+BQ_TABLE="your_table"
 ```
 
 #### 4. Setup GCP Environment
