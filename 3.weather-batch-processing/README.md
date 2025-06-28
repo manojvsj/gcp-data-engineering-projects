@@ -16,7 +16,7 @@ This project uses a Cloud Function and Cloud Scheduler to fetch live weather dat
 
 ```
 weather-pipeline/
-├── fetch_weather.py           # Cloud Function to fetch and write data
+├── main.py                   # Cloud Function to fetch and write data
 ├── requirements.txt           # Python packages
 ├── deploy.sh                  # Deploys function + scheduler
 ├── cleanup.sh                 # Deletes all GCP resources
