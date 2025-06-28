@@ -13,6 +13,6 @@ gcloud functions delete $FUNCTION_NAME --region=$REGION --quiet
 bq rm -f -t ${PROJECT_ID}:${DATASET}.${TABLE}
 
 # Delete Cloud Scheduler job
-gcloud scheduler jobs delete weather-scheduler-job --quiet
+gcloud scheduler jobs delete weather-scheduler-job --quiet --location=$REGION
 
 echo "✅ Cleanup complete."
