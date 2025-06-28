@@ -4,6 +4,8 @@ This project uses a Cloud Function and Cloud Scheduler to fetch live weather dat
 
 ---
 
+![flow-diagram](gcp-project.gif)
+
 ## 🛠️ Tools Used
 - **Google Cloud Functions** (Python)
 - **Cloud Scheduler** (cron-like scheduling)
