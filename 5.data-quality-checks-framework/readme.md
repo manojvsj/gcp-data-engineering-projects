@@ -49,7 +49,8 @@ tables:
       - type: range_check
         column: age
         min: 18
-        max: 100 ```
+        max: 100
+  ```
 
 ## ✅ Setup
 
