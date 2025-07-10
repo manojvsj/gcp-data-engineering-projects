@@ -1,0 +1,22 @@
+tables:
+  - name: nuk-datatech-poc.atomic.k_party
+    partition_column: dw_insert_date
+    checks:
+      - type: null_check
+        column: party_id
+      - type: duplicate_check
+        column: natural_key
+      - type: range_check
+        column: source_id
+        min: 0
+        max: 10
+
+  - name: nuk-datatech-poc.SFTP_GCS_BQ.sftp_file
+    checks:
+      - type: null_check
+        column: zuora__account__c
+      - type: range_check
+        column: source_id
+        min: 100
+        max: 200
+
