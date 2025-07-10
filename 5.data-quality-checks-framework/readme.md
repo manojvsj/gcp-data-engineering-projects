@@ -15,11 +15,11 @@ Use Cloud Functions to run basic data quality checks on partitioned BigQuery tab
 
 ## 📁 Project Structure
 ```
-5.data-quality-checks/
+5.data-quality-checks-framework/
 ├── dq_check.py # Core logic for running DQ checks
 ├── main.py # Cloud Function entrypoint
 ├── dq_config.yaml # List of tables and checks
-├── deploy.sh # Deploys GCP resources
+├── setup.sh # Deploys GCP resources
 ├── cleanup.sh # Deletes all created resources
 └── README.md
 ```
