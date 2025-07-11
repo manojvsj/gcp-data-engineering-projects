@@ -4,6 +4,8 @@ Use Cloud Functions to run basic data quality checks on partitioned BigQuery tab
 
 ---
 
+![flow-diagram](gcp-project-5.gif)
+
 ## 🛠️ Tools Used
 - **Python (3.10+)**
 - **BigQuery**
