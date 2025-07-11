@@ -57,7 +57,7 @@ tables:
 1. Replace:
    - `your_dataset and your_project` in `dq_config.yaml` and `dq_check.py`
 
-2. Run GCP setup.sh to create BigQuery monitoring table, cloudfunction and scheduler :
+2. Run GCP setup.sh to create BigQuery monitoring table, cloud function and scheduler :
 
 ```bash
 chmod +x deploy.sh
@@ -70,15 +70,15 @@ This will:
 - Schedule it to run daily using Cloud Scheduler\
 
 📊 Sample Output Table: data_quality_results
-| check\_name        | table\_name                    | failed\_rows | total\_rows | pass\_ratio | checked\_at              |
-| ------------------ | ------------------------------ | ------------ | ----------- | ----------- | ------------------------ |
-| null\_check\_email | project.dataset.customer\_data | 5            | 1000        | 0.995       | 2024-07-10T08:00:00.000Z |
+| partition\_date    | check\_name        | table\_name                    | failed\_rows | total\_rows | pass\_ratio | checked\_at              |
+| ------------------ | ------------------ | ------------------------------ | ------------ | ----------- | ----------- | ------------------------ |
+| 2024-07-10         | null\_check\_email | project.dataset.customer\_data | 5            | 1000        | 0.995       | 2024-07-10T08:00:00.000Z |
 
 
 
 🧹 Optional Cleanup
 ```
-gcloud functions delete dq_checker --region=us-central1
+. ./cleanup.sh
 ```
 
 
