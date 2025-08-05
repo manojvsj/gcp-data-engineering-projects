@@ -17,9 +17,9 @@ CLUSTER_NAME="gcp-learning-4-cluster" # it need unique name
 gsutil mb -l $REGION gs://$GCS_BUCKET/
 gsutil mb -l $REGION gs://$TEMP_BUCKET/
 
-# Upload data and script
-# gsutil cp ./data/input/orders_data.csv gs://$GCS_BUCKET/input/
-# gsutil cp $PYSPARK_FILE gs://$GCS_BUCKET/scripts/
+Upload data and script
+gsutil cp ./data/input/orders_data.csv gs://$GCS_BUCKET/input/
+gsutil cp $PYSPARK_FILE gs://$GCS_BUCKET/scripts/
 
 # Create Dataset if it doesn't exist
 if ! bq --location=$REGION ls --format=prettyjson $DATASET >/dev/null 2>&1; then

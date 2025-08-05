@@ -1,0 +1,6 @@
+google-cloud-dataproc==5.21.0
+google-cloud-storage==2.5.0
+google-cloud-bigquery==3.13.0
+google-cloud-bigquery-biglake==0.4.13
+google-cloud-bigquery-connection==1.18.3
+google-cloud-dataproc-metastore==1.18.3

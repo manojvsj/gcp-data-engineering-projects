@@ -52,6 +52,9 @@ This repository contains a collection of mini projects focused on data engineeri
    - Create fake data to publish on pubsub
    - Stream data to pubsub to Bigquery using dataflow stream job
 
+6. 6.dataproc-spark-iceberg-processing/ - Dataproc Spark Processing with BigQuery Iceberg Tables
+    - Upgrade Spark-based pipeline to use BigQuery Iceberg tables for ACID transactions, time travel, and schema evolution.
+    - Includes scripts for cluster setup, table creation, and Spark job execution.
 
 
 ## Follow for Updates

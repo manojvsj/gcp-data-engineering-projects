@@ -1,0 +1,164 @@
+gcp:
+  project_id: "your-project-id"  # Replace with your GCP project ID
+  region: "europe-west2"
+  metastore_name: "iceberg-metastore"
+  network: "default"
+  dataproc:
+    cluster_name: "medallion-cluster"
+    master_machine_type: "n4-standard-4"
+    worker_machine_type: "n4-standard-2"
+    staging_bucket: "gcs-iceberg-adsf"
+    num_workers: 2
+    num_masters: 1
+    idle_timeout: "900s"
+  bigquery:
+    dataset_name: "sales"
+    external_table_name: "orders_external_table"
+    location: "europe-west2"
+    connection: "biglake_gcs_connection"
+
+storage:
+  warehouse_bucket: "gcs-iceberg-adsf"
+  bronze_path: "bronze-zone/orders/"
+  silver_path: "silver-zone/orders/"
+  gold_path: "gold-zone/orders/"
+  bigquery_external_table_path: "gold-biglake-parquet"
+  scripts_path: "scripts/orders/"
+  raw_data_path: "raw-data/orders/"
+  raw_data_schema:
+    - name: "InvoiceNo"
+      type: "int"
+      nullable: false
+    - name: "StockCode"
+      type: "string"
+      nullable: true
+    - name: "Description"
+      type: "string"
+      nullable: true
+    - name: "Quantity"
+      type: "int"
+      nullable: false
+    - name: "InvoiceDate"
+      type: "string"
+      nullable: true
+    - name: "UnitPrice"
+      type: "float"
+      nullable: true
+    - name: "CustomerID"
+      type: "string"
+      nullable: true
+    - name: "Country"
+      type: "string"
+      nullable: true
+
+
+iceberg:
+    database: "orders_db"
+    warehouse_path: "iceberg-warehouse"
+    catalog_type: "hive"
+    table_config:
+      bronze:
+        table_name: "order_bronze"
+        format: "iceberg"
+        partition_by: ["partition_date"]
+        table_schema:
+          - name: "InvoiceNo"
+            type: "int"
+            nullable: false
+          - name: "StockCode"
+            type: "string"
+            nullable: true
+          - name: "Description"
+            type: "string"
+            nullable: true
+          - name: "Quantity"
+            type: "int"
+            nullable: false
+          - name: "InvoiceDate"
+            type: "string"
+            nullable: true
+          - name: "UnitPrice"
+            type: "float"
+            nullable: true
+          - name: "CustomerID"
+            type: "string"
+            nullable: true
+          - name: "Country"
+            type: "string"
+            nullable: true
+          - name: "partition_date"
+            type: "date"
+            nullable: false
+          - name: "InvoiceTimestamp"
+            type: "timestamp"
+            nullable: false
+      silver:
+        table_name: "order_silver"
+        description: "Silver table for cleaned and enriched data"
+        format: "iceberg"
+        partition_by: ["partition_date"]
+        table_schema:
+          - name: "InvoiceNo"
+            type: "int"
+            nullable: false
+          - name: "StockCode"
+            type: "string"
+            nullable: true
+          - name: "Description"
+            type: "string"
+            nullable: true
+          - name: "Quantity"
+            type: "int"
+            nullable: false
+          - name: "InvoiceDate"
+            type: "string"
+            nullable: true
+          - name: "UnitPrice"
+            type: "float"
+            nullable: true
+          - name: "CustomerID"
+            type: "string"
+            nullable: true
+          - name: "Country"
+            type: "string"
+            nullable: true
+          - name: "InvoiceTimestamp"
+            type: "timestamp"
+            nullable: false
+          - name: "year"
+            type: "int"
+            nullable: false
+          - name: "month"
+            type: "int"
+            nullable: false
+          - name: "day"
+            type: "int"
+            nullable: false
+          - name: "partition_date"
+            type: "date"
+            nullable: false
+      gold:
+        table_name: "orders_gold"
+        format: "iceberg"
+        partition_by: ["year", "month"]
+        table_schema:
+          - name: "year"
+            type: "int"
+            nullable: false
+          - name: "month"
+            type: "int"
+            nullable: false
+          - name: "total_quantity"
+            type: "int"
+            nullable: false
+          - name: "total_revenue"
+            type: "double"
+            nullable: false
+          - name: "num_orders"
+            type: "int"
+            nullable: false
+
+quality_checks:
+  enable_data_quality: true
+  null_threshold: 0.1
+  duplicate_threshold: 0.05
