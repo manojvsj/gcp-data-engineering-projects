@@ -1,0 +1,53 @@
+# dataflow_jobs/config.yaml
+# Simple Lambda Architecture Configuration
+
+# GCP Project Settings
+project:
+  id: "<your-project-id>"
+  region: "europe-west2"
+
+# Pub/Sub Configuration
+pubsub:
+  input_topic: "projects/<your-project-id>/topics/raw-data-stream"
+  dlq_topic: "projects/<your-project-id>/topics/dlq-stream"
+
+# Dataflow Configuration
+dataflow:
+  job_name: "lambda-streaming-pipeline"
+  temp_location: "gs://dataflow-temp-stream001/temp"
+  staging_location: "gs://dataflow-temp-stream001/staging"
+  max_num_workers: 3
+
+# GCS Configuration
+gcs:
+  temp_bucket: "dataflow-temp-stream001"
+
+# Iceberg Configuration
+iceberg:
+  warehouse: "iceberg-streaming-stream001"
+  script_bucket: "iceberg-streaming-stream001"
+  database: "streaming_db"
+  table: "events"
+
+# BigQuery Configuration
+bigquery:
+  dataset: "streaming_analytics"
+  realtime_table: "events_realtime"
+
+# Sample message schema (for reference)
+sample_event:
+  event_id: "evt_123456"
+  event_type: "purchase"
+  user_id: "user_1234"
+  session_id: "session_5678"
+  event_timestamp: "2024-01-01T10:00:00Z"
+  properties:
+    product: "laptop"
+    price: 999.99
+    quantity: 1
+    country: "UK"
+    device_type: "desktop"
+    page_url: "/product/laptop"
+    referrer: "google"
+  data_source: "ecommerce_app"
+  schema_version: "1.0"

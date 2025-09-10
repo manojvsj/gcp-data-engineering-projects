@@ -1,0 +1,16 @@
+# Core dependencies for Lambda Architecture Streaming Pipeline
+apache-beam[gcp]==2.55.0
+google-cloud-pubsub==2.18.0
+google-cloud-bigquery==3.11.4
+google-cloud-storage==2.14.0
+google-cloud-dataproc-metastore==1.18.3
+PyYAML==6.0.1
+pyiceberg==0.5.1
+
+# Optional dependencies for enhanced functionality
+google-cloud-monitoring==2.15.1
+google-cloud-logging==3.8.0
+
+# Development dependencies
+pytest==7.4.0
+pytest-cov==4.1.0

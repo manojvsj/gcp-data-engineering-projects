@@ -1,2 +1,12 @@
 ./run_dataproc.sh
 ./run_job.sh
+.claude
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pywz
+*.pyzw
