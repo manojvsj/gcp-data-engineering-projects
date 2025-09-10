@@ -1,6 +1,6 @@
 # 🏗️ Project 7/50: Lambda Architecture with GCP, Iceberg & BigQuery
 
-![flow-diagram](architecture-diagram.png)
+![flow-diagram](architecture-diagram.gif)
 
 A **beginner-friendly** real-time streaming data pipeline implementing **Lambda Architecture** pattern using Google Cloud Platform.
 
