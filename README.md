@@ -40,22 +40,108 @@ This repository contains a collection of mini projects focused on data engineeri
 
 ## Projects
 
-1. **[Simple Event Driven File processing](https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/1.event-driven-file-processing)**
+### 1. **[Event Driven File Processing](./1.event-driven-file-processing/)**
+🛠 **Project 1/50** | **Tools:** Cloud Functions, GCS, BigQuery
 
-   This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically
+This project deploys a Google Cloud Function that triggers when a file is uploaded to a GCS bucket and loads it into a BigQuery table automatically.
 
-2. **[Data Processing with Realtime pipeline](https://github.com/manojvsj/gcp-data-engineering-projects/tree/main/1.event-driven-file-processing)**
+**Features:**
+- Automatic CSV file processing on GCS upload
+- Schema auto-detection in BigQuery
+- Event-driven serverless architecture
 
-   Real time data processing with Cloud dataflow, it will listen the pub/sub topic and whenever new message arraives it will process and stream into bigquery immediatly.
+---
 
-   - Use Google Cloud dataflow to stream data using Apache beam.
-   - Create fake data to publish on pubsub
-   - Stream data to pubsub to Bigquery using dataflow stream job
+### 2. **[Real-time Data Ingestion](./2.realtime-data-ingestion/)**
+🛠 **Project 2/50** | **Tools:** Pub/Sub, Dataflow (Apache Beam), BigQuery
 
-6. 6.dataproc-spark-iceberg-processing/ - Dataproc Spark Processing with BigQuery Iceberg Tables
-    - Upgrade Spark-based pipeline to use BigQuery Iceberg tables for ACID transactions, time travel, and schema evolution.
-    - Includes scripts for cluster setup, table creation, and Spark job execution.
+Real-time data processing pipeline using Pub/Sub for message ingestion, Dataflow for stream processing, and BigQuery for analytics.
 
+**Features:**
+- Pub/Sub message streaming
+- Apache Beam pipeline processing
+- Real-time data insertion to BigQuery
+- Support for both local testing and cloud deployment
+
+---
+
+### 3. **[Weather Data Pipeline](./3.weather-batch-processing/)**
+🛠 **Project 3/50** | **Tools:** Cloud Functions, Cloud Scheduler, BigQuery, Open-Meteo API
+
+Automated weather data collection system that fetches live weather data every 15 minutes and stores it in BigQuery for analysis.
+
+**Features:**
+- Scheduled data collection (15-minute intervals)
+- Open-Meteo API integration (no API key required)
+- Historical weather data accumulation
+- UTC timestamp handling
+
+---
+
+### 4. **[Batch Processing with Spark](./4.dataproc-spark-processing/)**
+🛠 **Project 4/50** | **Tools:** Dataproc, PySpark, BigQuery External Tables, GCS
+
+Process historical order data using PySpark on Dataproc, write partitioned Parquet files to GCS, and create BigQuery External tables for reporting.
+
+**Features:**
+- PySpark data processing on Dataproc
+- Partitioned Parquet file output
+- BigQuery External table integration
+- Automated cluster management
+
+---
+
+### 5. **[Data Quality Checks Framework](./5.data-quality-checks-framework/)**
+🛠 **Project 5/50** | **Tools:** Cloud Functions, BigQuery, Cloud Scheduler, PyYAML
+
+Automated data quality validation framework that runs configurable checks on BigQuery tables with scheduled monitoring.
+
+**Features:**
+- Configurable data quality checks (null, duplicate, range validation)
+- Partition-based quality assessment
+- Automated scheduling with Cloud Scheduler
+- Quality metrics reporting and tracking
+
+---
+
+### 6. **[Medallion Architecture with Iceberg](./6.dataproc-spark-iceberg-medallion/)**
+🛠 **Project 6/50** | **Tools:** Dataproc, Apache Spark, Apache Iceberg, BigQuery, Dataproc Metastore
+
+Complete medallion architecture (Bronze-Silver-Gold) implementation using Dataproc Spark, Apache Iceberg, and BigQuery external tables.
+
+**Features:**
+- Three-tier medallion architecture (Bronze/Silver/Gold layers)
+- Apache Iceberg ACID transactions and time travel
+- Schema evolution capabilities
+- BigQuery external table integration
+- Dataproc Metastore for metadata management
+
+---
+
+### 7. **[Lambda Architecture with Iceberg & BigQuery](./7.iceberg-bigquery-lambda-architecture/)**
+🛠 **Project 7/50** | **Tools:** Pub/Sub, Dataflow, BigQuery, Apache Iceberg, Dataproc Serverless, GCS
+
+Advanced Lambda Architecture implementation with both real-time (speed layer) and batch processing layers for comprehensive data processing.
+
+**Features:**
+- **Speed Layer:** Pub/Sub → Dataflow → BigQuery (real-time analytics)
+- **Batch Layer:** Pub/Sub → Dataflow → GCS → Spark → Iceberg (comprehensive analysis)
+- **Serving Layer:** BigQuery for real-time queries, Iceberg for complex analytics
+- Apache Iceberg for ACID transactions and time travel
+- Dataproc Serverless for batch processing
+- End-to-end monitoring and observability
+
+---
+
+## Architecture Progression
+
+This collection demonstrates a progression from simple to complex data engineering architectures:
+
+1. **Event-driven** (Project 1) → **Streaming** (Project 2) → **Scheduled** (Project 3)
+2. **Batch Processing** (Project 4) → **Data Quality** (Project 5) 
+3. **Medallion Architecture** (Project 6) → **Lambda Architecture** (Project 7)
+
+Each project builds upon concepts from previous ones while introducing new GCP services and architectural patterns.
 
 ## Follow for Updates
 
