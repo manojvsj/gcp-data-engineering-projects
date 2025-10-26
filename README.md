@@ -133,13 +133,29 @@ Advanced Lambda Architecture implementation with both real-time (speed layer) an
 
 ---
 
+### 8. **[Natural Language to BigQuery with Vertex AI](./8.bigquery-vertexai-mcp-connection/)**
+🛠 **Project 8/50** | **Tools:** Cloud Run, Streamlit, Vertex AI (Gemini), BigQuery, FastAPI
+
+Natural language interface to query BigQuery using Vertex AI for SQL generation and MCP (Model Context Protocol) pattern for secure execution.
+
+**Features:**
+- Natural language to SQL conversion using Vertex AI Gemini models
+- Secure query execution using MCP pattern
+- Interactive web interface with Streamlit
+- Automated input validation and query optimization
+- AI-powered result summaries
+- Service-to-service authentication with Cloud Run
+
+---
+
 ## Architecture Progression
 
 This collection demonstrates a progression from simple to complex data engineering architectures:
 
 1. **Event-driven** (Project 1) → **Streaming** (Project 2) → **Scheduled** (Project 3)
-2. **Batch Processing** (Project 4) → **Data Quality** (Project 5) 
+2. **Batch Processing** (Project 4) → **Data Quality** (Project 5)
 3. **Medallion Architecture** (Project 6) → **Lambda Architecture** (Project 7)
+4. **AI-Powered Analytics** (Project 8) - Natural language interfaces with Generative AI
 
 Each project builds upon concepts from previous ones while introducing new GCP services and architectural patterns.
 
