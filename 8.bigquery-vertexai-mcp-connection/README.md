@@ -4,7 +4,7 @@
 
 Ask questions in plain English and get answers from your BigQuery data! This project uses Google's Vertex AI to convert natural language questions into SQL queries and executes them securely using the MCP (Model Context Protocol) pattern.
 
-![flow-diagram](project-8.png)
+![flow-diagram](project-8.gif)
 
 ### 🗂 Project Structure
 ```
