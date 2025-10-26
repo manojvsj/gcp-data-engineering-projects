@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mcp-bigquery-server:
+    build: ./mcp-bigquery-server
+    container_name: mcp-bigquery-server
+    ports:
+      - "8080:8080"
+    environment:
+      - PROJECT_ID=${PROJECT_ID}
+      - DATASET_ID=${DATASET_ID:-sales_data}
+      - TABLE_ID=${TABLE_ID:-orders}
+    volumes:
+      - ${HOME}/.config/gcloud:/root/.config/gcloud:ro
+    networks:
+      - app-network
+
+  streamlit-app:
+    build: ./streamlit-app
+    container_name: streamlit-app
+    ports:
+      - "8501:8501"
+    environment:
+      - PROJECT_ID=${PROJECT_ID}
+      - REGION=${REGION}
+      - LOCATION=${LOCATION}
+      - MCP_SERVER_URL=http://mcp-bigquery-server:8080
+      - DATASET_ID=${DATASET_ID:-sales_data}
+      - TABLE_ID=${TABLE_ID:-orders}
+      - VERTEX_AI_MODEL=${VERTEX_AI_MODEL:-gemini-1.5-flash}
+    volumes:
+      - ${HOME}/.config/gcloud:/root/.config/gcloud:ro
+    depends_on:
+      - mcp-bigquery-server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

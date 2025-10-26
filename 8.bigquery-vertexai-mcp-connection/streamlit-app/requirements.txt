@@ -1,0 +1,5 @@
+streamlit
+google-cloud-aiplatform
+google-auth
+requests
+python-dotenv

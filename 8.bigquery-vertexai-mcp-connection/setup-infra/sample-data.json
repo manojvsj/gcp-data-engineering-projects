@@ -1,0 +1,35 @@
+{"order_id": "ORD001", "customer_name": "John Smith", "product": "Laptop", "quantity": 2, "price": 1200.00, "order_date": "2024-01-15", "region": "North"}
+{"order_id": "ORD002", "customer_name": "Sarah Johnson", "product": "Mouse", "quantity": 5, "price": 25.50, "order_date": "2024-01-16", "region": "South"}
+{"order_id": "ORD003", "customer_name": "Michael Brown", "product": "Keyboard", "quantity": 3, "price": 75.00, "order_date": "2024-01-17", "region": "East"}
+{"order_id": "ORD004", "customer_name": "Emily Davis", "product": "Monitor", "quantity": 1, "price": 350.00, "order_date": "2024-01-18", "region": "West"}
+{"order_id": "ORD005", "customer_name": "David Wilson", "product": "Laptop", "quantity": 1, "price": 1200.00, "order_date": "2024-01-19", "region": "North"}
+{"order_id": "ORD006", "customer_name": "Lisa Anderson", "product": "Headphones", "quantity": 4, "price": 89.99, "order_date": "2024-01-20", "region": "South"}
+{"order_id": "ORD007", "customer_name": "James Martinez", "product": "Webcam", "quantity": 2, "price": 65.00, "order_date": "2024-01-21", "region": "East"}
+{"order_id": "ORD008", "customer_name": "Jennifer Garcia", "product": "Laptop", "quantity": 3, "price": 1200.00, "order_date": "2024-01-22", "region": "West"}
+{"order_id": "ORD009", "customer_name": "Robert Rodriguez", "product": "USB Cable", "quantity": 10, "price": 8.99, "order_date": "2024-01-23", "region": "North"}
+{"order_id": "ORD010", "customer_name": "Mary Hernandez", "product": "External Hard Drive", "quantity": 2, "price": 120.00, "order_date": "2024-01-24", "region": "South"}
+{"order_id": "ORD011", "customer_name": "William Lopez", "product": "Laptop", "quantity": 1, "price": 1200.00, "order_date": "2024-02-01", "region": "East"}
+{"order_id": "ORD012", "customer_name": "Patricia Gonzalez", "product": "Printer", "quantity": 1, "price": 250.00, "order_date": "2024-02-02", "region": "West"}
+{"order_id": "ORD013", "customer_name": "Christopher Wilson", "product": "Mouse", "quantity": 8, "price": 25.50, "order_date": "2024-02-03", "region": "North"}
+{"order_id": "ORD014", "customer_name": "Barbara Anderson", "product": "Laptop", "quantity": 2, "price": 1200.00, "order_date": "2024-02-04", "region": "South"}
+{"order_id": "ORD015", "customer_name": "Daniel Thomas", "product": "Monitor", "quantity": 3, "price": 350.00, "order_date": "2024-02-05", "region": "East"}
+{"order_id": "ORD016", "customer_name": "Jessica Taylor", "product": "Keyboard", "quantity": 6, "price": 75.00, "order_date": "2024-02-06", "region": "West"}
+{"order_id": "ORD017", "customer_name": "Matthew Moore", "product": "Headphones", "quantity": 2, "price": 89.99, "order_date": "2024-02-07", "region": "North"}
+{"order_id": "ORD018", "customer_name": "Ashley Jackson", "product": "Webcam", "quantity": 4, "price": 65.00, "order_date": "2024-02-08", "region": "South"}
+{"order_id": "ORD019", "customer_name": "Joshua Martin", "product": "Laptop", "quantity": 1, "price": 1200.00, "order_date": "2024-02-09", "region": "East"}
+{"order_id": "ORD020", "customer_name": "Amanda Lee", "product": "USB Cable", "quantity": 15, "price": 8.99, "order_date": "2024-02-10", "region": "West"}
+{"order_id": "ORD021", "customer_name": "Andrew Perez", "product": "External Hard Drive", "quantity": 3, "price": 120.00, "order_date": "2024-02-11", "region": "North"}
+{"order_id": "ORD022", "customer_name": "Stephanie White", "product": "Laptop", "quantity": 2, "price": 1200.00, "order_date": "2024-02-12", "region": "South"}
+{"order_id": "ORD023", "customer_name": "Ryan Harris", "product": "Monitor", "quantity": 2, "price": 350.00, "order_date": "2024-02-13", "region": "East"}
+{"order_id": "ORD024", "customer_name": "Nicole Clark", "product": "Mouse", "quantity": 7, "price": 25.50, "order_date": "2024-02-14", "region": "West"}
+{"order_id": "ORD025", "customer_name": "Brandon Lewis", "product": "Keyboard", "quantity": 4, "price": 75.00, "order_date": "2024-02-15", "region": "North"}
+{"order_id": "ORD026", "customer_name": "Samantha Robinson", "product": "Headphones", "quantity": 3, "price": 89.99, "order_date": "2024-03-01", "region": "South"}
+{"order_id": "ORD027", "customer_name": "Kevin Walker", "product": "Laptop", "quantity": 1, "price": 1200.00, "order_date": "2024-03-02", "region": "East"}
+{"order_id": "ORD028", "customer_name": "Rachel Hall", "product": "Webcam", "quantity": 5, "price": 65.00, "order_date": "2024-03-03", "region": "West"}
+{"order_id": "ORD029", "customer_name": "Jason Allen", "product": "USB Cable", "quantity": 12, "price": 8.99, "order_date": "2024-03-04", "region": "North"}
+{"order_id": "ORD030", "customer_name": "Lauren Young", "product": "External Hard Drive", "quantity": 1, "price": 120.00, "order_date": "2024-03-05", "region": "South"}
+{"order_id": "ORD031", "customer_name": "Justin King", "product": "Laptop", "quantity": 4, "price": 1200.00, "order_date": "2024-03-06", "region": "East"}
+{"order_id": "ORD032", "customer_name": "Heather Wright", "product": "Printer", "quantity": 2, "price": 250.00, "order_date": "2024-03-07", "region": "West"}
+{"order_id": "ORD033", "customer_name": "Nathan Scott", "product": "Monitor", "quantity": 1, "price": 350.00, "order_date": "2024-03-08", "region": "North"}
+{"order_id": "ORD034", "customer_name": "Megan Green", "product": "Mouse", "quantity": 9, "price": 25.50, "order_date": "2024-03-09", "region": "South"}
+{"order_id": "ORD035", "customer_name": "Tyler Baker", "product": "Keyboard", "quantity": 5, "price": 75.00, "order_date": "2024-03-10", "region": "East"}
