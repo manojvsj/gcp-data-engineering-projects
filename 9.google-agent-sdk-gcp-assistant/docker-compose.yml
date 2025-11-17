@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  agent:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ~/.config/gcloud:/root/.config/gcloud:ro
+    environment:
+      - GOOGLE_GENAI_USE_VERTEXAI=TRUE
+      - GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT}
+      - GOOGLE_CLOUD_LOCATION=${GOOGLE_CLOUD_LOCATION}
+      - GOOGLE_APPLICATION_CREDENTIALS=/root/.config/gcloud/application_default_credentials.json
+    env_file:
+      - .env
